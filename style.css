@@ -1,0 +1,1019 @@
+/*link font*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* ================variables============ */
+:root { /* Define as variáveis CSS */
+
+/* ================header============ */
+  --header-height: 3.5rem; /* Altura do cabeçalho */
+  --padding-x: 1.5rem; /* Espaçamento lateral */
+  --padding-y: 1.5rem; /* Espaçamento vertical */
+
+/* ================colors============ */
+/* Primary colors */
+  --primary-color: #f00;
+/* Secondary colors */
+  --secondary-color: #000;
+/* Tertiary colors */
+  --tertiary-color: #00f;
+
+/*=========background colors============*/
+  --background-color-light: #f0f0f0;
+  --background-color: #fff;
+
+/* ==============Text colors========== */
+  --text-color-1: #fff;
+  --text-color: #333;
+
+/* ================fonts============ */
+  --font-family: 'Poppins', sans-serif;
+
+/* ================sizes============ */
+  --font-size: 15px; /* 15px */
+  --font-size-small: 12px; /* 14px */
+  --font-size-large: 1.125rem; /* 18px */
+
+/*===========font-weight============*/
+  --font-weight: 400;
+  --font-weight-light: 300;
+
+/* ================spacing============ */
+  --spacing: 1rem; /* 16px */
+  --spacing-small: .5rem; /* 8px */
+  --spacing-large: 1.5rem; /* 24px */
+}
+
+
+/* ================base============ */
+* {
+  margin: 0;  /* Remove a margem */
+  padding: 0; /* Remove o padding */
+  box-sizing: border-box; /* Para incluir o padding e a borda no tamanho total do elemento */
+}
+
+body {
+  font-family: var(--font-family);    /* Fonte padrão */
+  background-color: var(--background-color);  /* Cor de fundo */
+  color: var(--text-color); /* Cor do texto */
+}
+
+ul {
+  list-style: none;   /* Remove os marcadores da lista */
+}
+
+a {
+  text-decoration: none;  /* Remove o sublinhado */
+  color: inherit; /* Mantém a cor do texto */
+}
+
+html, body {
+  height: 100%; /* Garante que o HTML e o body ocupem 100% da altura */
+}
+
+
+
+/*==================reusable classes=================*/
+.container {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0 auto;
+  padding-left: var(--padding-x);
+  padding-right: var(--padding-x);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  position: relative;
+  max-width: 1290px; /* Melhorando para um valor um pouco maior, mantendo um bom espaçamento */
+  margin: 0 auto;
+  padding: 6rem 2rem 3rem; /* Ajustei o padding para dar mais espaçamento na parte inferior */
+  box-sizing: border-box;
+}
+
+.section-title-01 {
+  font-size: 14px; /* Aumentando um pouco o tamanho da fonte para destaque */
+  font-weight: 200; /* Maior peso para o título ficar ainda mais imponente */
+  margin-top: 185px;
+  margin-bottom: 60px; /* Dando um pouco mais de espaço abaixo do título */
+  background: linear-gradient(to top, transparent 0%, var(--text-color) 60%); /* Gradiente de fundo */
+  background-clip: text;
+  color: var(--text-color);
+  text-align: center; /* Alinhando o título ao centro para maior harmonia */
+}
+
+.section-title-02 {
+  font-size: 24px; /* Aumentando um pouco o tamanho */
+  font-weight: 700;
+  margin-bottom: 20px; /* Diminui a distância do conteúdo inferior */
+  transform: translateY(-60px); /* Ajuste para uma melhor posição */
+  color: var(--text-color ); /* Garantindo que o texto tenha uma cor visível */
+  text-align: center; /* Adicionando alinhamento central */
+}
+
+.section-title-02::before {
+  content: '';
+  position: absolute;
+  width: 50px; /* Aumentando a largura da linha */
+  height: 4px; /* Tamanho mais sutil */
+  left: 50%; /* Centralizando horizontalmente */
+  border-radius: 15px; /* Bordas arredondadas */
+  transform: translateX(-50%); /* Centrado horizontalmente */
+  bottom: -5px; /* Ajuste para melhor posicionamento */
+  background: var(--primary-color);
+}
+
+.section-title-02 span{
+  color: #cc0000;
+}
+
+hr{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+
+/*==================header=================*/
+header {
+  top: 0; /* Para alinhar o cabeçalho ao topo */
+  left: 0; /* Para alinhar o cabeçalho à esquerda */
+  width: 100%; /* Largura total */
+  background-color: var(--background-color-light); /* Cor de fundo do cabeçalho */ 
+}
+
+
+
+/*==================barra=================*/
+.barra {
+  top: 0; /* Para alinhar a barra ao topo */
+  left: 0; /* Para alinhar a barra à esquerda */
+  width: 100%; /* Largura total */
+  max-height: 95px; /* Altura máxima da barra */
+  margin: 0; /* Remove a margem */
+  padding: var(--spacing); /* Adiciona espaçamento interno */
+  background-color: #cc0000; /* Cor de fundo da barra */
+}
+
+.barra_items {
+  top: 0; /* Para alinhar os itens no topo */
+  display: flex; /* Para alinhar os itens horizontalmente */
+  align-items: center;    /* Alinhamento vertical central */
+  justify-content: space-around; /* Distribuição horizontal opcional */
+  height: 85px;           /* Defina a altura conforme necessário */
+}
+
+.item {
+  display: flex; /* Para alinhar o <h4> e o <a> */
+  flex-direction: column; /* Para empilhar o <h4> e o <a> */
+  align-items: center;    /* Alinha os itens horizontalmente ao centro */
+  text-align: center;     /* Centraliza o texto */
+  font-size: 12px; /* Tamanho da fonte */
+}
+
+.item h4 {
+  font-size: 14px; /* Tamanho da fonte do título */
+  font-weight: 500; /* Peso da fonte */
+  color: #fff; /* Cor do texto */
+}
+
+.item a {
+  color: #fff; /* Cor do link */
+  text-decoration: none; /* Remove o sublinhado do link */
+  font-size: 12px; /* Tamanho da fonte do link */
+  font-weight: 400; /* Peso da fonte do link */
+}
+
+/*==================nav sticky effect=================*/
+
+.nav.sticky {
+  position: fixed;
+  width: 100vw;
+  height: 64px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--background-color-light); /* Pode ser qualquer cor ou fundo desejado */
+  transition: 0.3s ease; /* Faz a transição suave quando o menu ficar fixo */
+}
+
+/* Estilo reduzido para sticky */
+.nav.sticky .btn__link {
+  height: 42px;
+  line-height: 32px;
+  font-size: 14px;
+  padding: 0 16px;
+}
+
+
+/*==================nav=================*/
+
+
+.nav {
+  display: flex;
+  left: 0;
+  flex-shrink: 0; /* Impede que o menu encolha */
+  position: relative; /* Deixa o nav com posição relativa */
+  z-index: 10; /* Para garantir que o menu fique sobre outros elementos */
+  width: 100%; /* Garante que o menu ocupe toda a largura */
+  background-color: var(--background-color-light); /* Adiciona fundo */
+  padding: var(--spacing); /* Ajuste o espaçamento interno */
+}
+
+
+
+
+.nav__logo,
+.nav__burger,
+.nav__close {
+  color: #000; /* Cor do texto */
+}
+
+
+
+
+.nav__data{
+  height: 100%; /* Altura total */
+  display: flex; /* Para alinhar os itens horizontalmente */
+  justify-content: space-between; /* Distribuição horizontal */
+  align-items: center; /* Alinhamento vertical central */
+  padding: var(--spacing); /* Adiciona espaçamento interno */
+  gap: 32px;
+}
+
+.nav__logo{
+  display: inline-flex; /* Para alinhar o logo */
+  align-self: center; /* Alinhamento vertical central */
+  column-gap: .25rem; /* 4px */
+  font-weight: 400; /* Peso da fonte */
+  gap: 1rem; /* 12px */  /* Espaçamento entre os itens */
+}
+
+.nav__logo-img{
+  width: 3.5rem; /* Largura do logo */
+  height: 3.5rem; /* Altura do logo */
+}
+
+.nav__logo2{
+  width: 2rem; /* Largura do logo */
+  height: 2rem; /* Altura do logo */
+}
+
+.nav__toggle{
+  display: none; /* Para ocultar o botão de menu */
+  position: absolute; /* Para posicionar o botão */
+  position: relative; /* Para posicionar o botão */
+  width: 32px; /* Largura do botão */
+  height: 32px; /* Tamanho do botão */
+}
+
+.nav__burger,
+.nav__close{
+  position: absolute; /* Para posicionar o botão */
+  width: max-content; /* Para ajustar o tamanho do botão */
+  height: max-content; /* Para ajustar o tamanho do botão */
+  inset: 0; /* Para alinhar o botão */
+  margin: auto; /* Para centralizar o botão */
+  font-size: 1.25rem; /* 20px */
+  cursor: pointer; /* Para mostrar o cursor de ponteiro */
+  transition: opacity .1s, transform .4s;
+}
+
+.nav__close{
+  opacity: 0;
+}
+
+/*==================nav menu for mobile devices=================*/
+@media screen and (max-width: 1118px){
+  .nav__toggle{
+    display: block; /* Para mostrar o botão de menu */
+    cursor: pointer; /* Para mostrar o cursor de ponteiro */
+  }
+  .nav__menu{
+    position: absolute; /* Para posicionar o menu */
+    left: 0; /* Para alinhar o menu à esquerda */
+    top: 2.5rem; /* 40px */
+    width: 100%; /* Largura total */
+    height: calc(100vh - 3.5rem); /* 56px */
+    overflow: hidden; /* Para ocultar o conteúdo que transborda */
+    pointer-events: none; /* Para desativar os eventos do mouse */
+    opacity: 0; /* Para ocultar o menu */
+    transition: top .4s, opacity .3s; /* Transição suave */
+  }
+  .nav__menu::-webkit-scrollbar{
+    width: 0; /* Oculta a barra de rolagem */
+  }
+  .nav__list{
+    background-color: var(--background-color-light); /* Cor de fundo */
+    padding-top: 1rem; /* 16px */
+  }
+}
+
+.nav__link{
+  color: var(--secondary-color); /* Cor do texto */
+  background-color: var(--background-color-light); /* Cor de fundo */
+  font-size: var(--font-size-small);
+  font-weight: 400; /* Peso da fonte */
+  padding: 1.25rem 1.5rem; /* 20px */ /* 25px*/
+  display: flex; /* Para alinhar os itens horizontalmente */
+  justify-content: space-between; /* Distribuição horizontal */
+  align-self: center; /* Alinhamento vertical central */
+  transition: background-color .3s ;
+}
+
+.nav__link:hover{
+  background-color: beige ; /* Cor de fundo ao passar o mouse */
+}
+
+/*==================show menu=================*/
+.show-menu{
+  opacity: 1; /* Para mostrar o menu */
+  top: 11.5rem; /* 184px */
+  pointer-events: initial; /* Para ativar os eventos do mouse */
+}
+
+/*==================show icon=================*/
+.show-icon .nav__burger{
+  opacity: 0; /* Para ocultar o botão de menu */
+  transform: rotate(90deg); /* Para girar o botão */
+}
+.show-icon .nav__close{
+  opacity: 1; /* Para mostrar o botão de menu */
+  transform: rotate(90deg); /* Para girar o botão */
+}
+
+/*==================dropdown menu=================*/
+.dropdown__item{
+  cursor: pointer; /* Para mostrar o cursor de ponteiro */
+}
+
+.dropdown__arrow{
+  font-size: 1.25rem; /* 20px */
+  font-weight: initial; /* Peso da fonte */
+  transition: transform .3s; /* Transição suave */
+}
+
+.dropdown__link{
+  padding: .80rem .85rem .25rem 2.5rem; /* 20px */ /* 20px */ /* 20px */ /* 40px*/
+  color: var(--secondary-color); /* Cor do texto */
+  background-color: var(--background-color-light); /* Cor de fundo */
+  display: flex; /* Para alinhar os itens horizontalmente */
+  align-items: center; /* Alinhamento vertical central */
+  column-gap: .5rem; /* 8px */
+  font-weight: 400; /* Peso da fonte */
+  font-size: var(--font-size-small);
+  transition: background-color .3s; /* Transição suave */
+}
+
+.dropdown__link:hover{
+  background-color: beige; /* Cor de fundo ao passar o mouse */
+}
+
+.dropdown__menu{
+  width: 102px;
+  max-height: 0; /* Altura máxima */
+  overflow: hidden; /* Para ocultar o conteúdo que transborda */
+  transition: max-height .4s ease-in-out; /* Transição suave */
+}   
+
+/*=================rotate dropdown menu=================*/
+.dropdown__item:hover .dropdown__arrow{
+  transform: rotate(180deg); /* Para girar o ícone */
+}
+
+/*=================breakpoints=================*/
+/* For small devices */
+@media screen and (max-width: 340px) {
+  .container {
+    margin: inline 1rem; /* Margem lateral */
+  }
+}
+/* For large devices */
+@media screen and (min-width: 1118px) {
+  /* Nav */
+  .nav {
+    height: calc(var(--header-height) + 2rem); /* Altura total */
+    display: flex; /* Para alinhar os itens horizontalmente */
+    justify-content: space-between; /* Distribuição horizontal */
+  }
+  .nav__toggle {
+    display: none; /* Para ocultar o botão de menu */
+  }
+  .nav__list {
+    display: flex; /* Para alinhar os itens horizontalmente */
+    column-gap: 1.5rem; /* 30px */
+    margin-bottom: 1.5rem; /* 24px */  
+    height: 100%; /* Altura total */
+    align-items: center; /* Alinhamento vertical central */
+  }
+  .nav__link {
+    height: 100%; /* Altura total */
+    padding: 0; /* Remove o padding */
+    font-size: var(--font-size-small); /* Tamanho da fonte */
+    justify-content: initial; /* Para alinhar os itens */
+    column-gap: .45rem; /* 7px */
+  }
+  .nav__link:hover {
+    background-color: transparent; /* Cor de fundo ao passar o mouse */
+    color: var(--primary-color); /* Cor do texto ao passar o mouse */
+  }
+  .dropdown__item{
+    position: relative; /* Para posicionar o menu */
+  }
+  .dropdown__menu{
+    max-height: initial; /* Altura máxima */
+    overflow: initial; /* Para ocultar o conteúdo que transborda */
+    position: absolute; /* Para posicionar o menu */
+    top: 100%; /* Para alinhar o menu abaixo do item */
+    left: 0; /* Para alinhar o menu à esquerda */
+    pointer-events: none; /* Para desativar os eventos do mouse */
+    transition: opacity .3s, top .3s; /* Transição suave */
+    opacity: 0; /* Para ocultar o menu */
+  } 
+  .dropdown__link{
+    padding-inline: 1rem 3.5rem; /* 16px */ /* 56px */
+  }
+
+  /*=================show dropdown menu=================*/
+  .dropdown__item:hover > .dropdown__menu {
+    opacity: 1; /* Para mostrar o menu */ 
+    pointer-events: initial; /* Para ativar os eventos do mouse */
+    transition: top .3s, opacity .3s; /* Transição suave */
+  }
+}
+
+/*==================buttons=================*/
+.btn__link {
+  margin-top: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 18px;
+  border-radius: 4px;
+  background-color: #c00;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+
+
+
+/*main*/
+
+/* Contêiner do carrossel */
+.slider {
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin-top: -8px;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden; /* Esconde as imagens que saem do contêiner */
+  margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Lista de itens (imagens do carrossel) */
+.slider .list {
+  display: flex;
+  transition: transform 1s ease-in-out; /* Transição suave para o deslizamento */
+  width: 100%; /* A lista ocupa 100% da largura do contêiner */
+}
+
+/* Cada item (imagem) */
+.slider .list .item {
+  width: 100%; /* Cada item ocupa 100% da largura da tela */
+  height: 100vh; /* Altura 100% da tela */
+  flex-shrink: 0; /* Impede que as imagens se encolham */
+}
+
+/* Definir a imagem para cobrir o espaço disponível */
+.slider .list .item img {
+  width: 100%;
+  height: 100%;
+  object-position: center; /* Centraliza a imagem */
+  background-size: 80%; /* Garante que a imagem cubra todo o espaço */
+  background-position: center; /* Centraliza a imagem */
+}
+
+.text-slider-banner{
+  position: absolute;
+  top: 90%;
+  left: 14px;
+  text-align: center;
+  z-index: 10;
+}
+
+.btn-theme{
+  background-color: #c00;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 300;
+  cursor: pointer;
+
+}
+
+/* ========================== Motos ========================== */
+
+.motos .title {
+  font-size: 22px;
+  font-family: sans-serif;
+  gap: 24px;
+  padding: 20px 5px 5px;
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+.motos .title .moto_title {
+  font-size: 35px;
+  font-weight: 500;
+  margin: 60px 0 0; /* 'auto' centraliza horizontalmente */
+  color: var(--text-color);
+  text-align: center; /* garante centralização do texto */
+  width: 100%; /* assegura que ocupe a largura total do container */
+  margin-bottom: 30px;
+}
+
+
+.motos .title .moto_subtitle {
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+/* ========================== Cards Layout ============================= */
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 24px;
+  padding: 20px 5px 5px;
+  max-width: 1290px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  cursor: pointer;
+  height: 200px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  background-color: #f2f2f2;
+  backdrop-filter: blur(8px);
+}
+ 
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.card .card-content {
+  background-color: var(--card-color, #f2f2f2);
+  border-radius: inherit;
+  height: calc(100% - 4px);
+  width: calc(100% - 4px);
+  margin: 2px;
+  position: relative;
+  z-index: 4;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.card-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  transition: transform 0.3s ease;
+}
+
+.card-footer {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+.card-button {
+  padding: 8px 104px;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-button:hover {
+  color: #c00;
+}
+
+
+.title__main {
+  display: flex ;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+
+/* ========================== Footer ============================= */
+
+.footer {
+  background-color: #333333;
+  border-top: 5px solid #c00;
+  padding: 40px;
+}
+
+.main-footer {
+  color: #fff;
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+.box-items {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1290px;
+  box-sizing: border-box;
+}
+
+/* Lista com os cards das lojas */
+.items-list {
+  display: flex;
+  flex-wrap: nowrap; /* força exibição em linha única */
+  justify-content: flex-start;
+  gap: 6px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+/* Cada item da lista */
+.items-list .item {
+  min-width: 240px;
+  max-width: 240px;
+  height: 444px;
+  flex-shrink: 0; /* Impede que os itens encolham */
+  display: flex; /* Exibe os itens como flexbox */
+  flex-direction: column; /* Alinha os itens verticalmente */
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Efeito hover */
+.items-list .item:hover {
+  transform: scale(1.05);
+  background-color: #c10202;
+  border-bottom: 5px solid #f00;
+  cursor: pointer;
+}
+
+/* Links brancos */
+.item > .white {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+
+  text-decoration: none;
+}
+
+/* Título da loja */
+.title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+
+}
+
+/* Endereço */
+.address {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  
+}
+
+/* Telefone */
+.phone {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  
+}
+
+.phone i {
+  margin-right: 5px;
+}
+
+/* WhatsApp */
+.whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  
+}
+
+.whatsapp i{
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  font-size: 20px;
+}
+
+/* Horário de funcionamento */
+.workshop {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  
+}
+
+.bold {
+  font-weight: 700;
+}
+
+
+/*============================bottom footer================================*/
+
+.bottom-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.main-footer {
+  display: flex;
+  flex-wrap: wrap;           /* permite quebrar em telas menores */
+  gap: 24px;                 /* espaçamento horizontal entre colunas */
+  box-sizing: border-box;
+}
+
+/* =============== COLUNA 1 =============== */
+.coluna1 {
+  padding: 0 20px;
+  text-align: left;
+}
+
+.title__footer {
+  border-bottom: 1px solid #c5c5c5;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+}
+
+.title__footer h5 {
+  border-bottom: 3px solid #c00;
+  font-size: 16px;
+  margin: 0;
+  padding-bottom: 2px;
+  display: inline-block;
+}
+
+.text__footer {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.text__footer p {
+  width: 100%;
+  margin: 4px 0;
+}
+
+/* =============== COLUNA 2 =============== */
+.coluna2 {
+  padding: 0 20px;
+  text-align: left;
+}
+
+.col2 {
+  border-bottom: 1px solid #c5c5c5;
+  margin-bottom: 8px;
+}
+
+.col2 .colMenu {
+  border-bottom: 3px solid #c00;
+  font-size: 16px;
+  margin-bottom: -2px;
+  display: inline-block;
+}
+
+/* =============== COLUNA SOCIAL + PROCONVE =============== */
+.llcol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+/* COLUNA 3 */
+.social-col3 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-media-text {
+  font-size: 14px;
+}
+
+.social-media-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.social-media-icons i {
+  color: #f2f2f2;
+  transition: color 0.3s ease;
+}
+
+.social-media-icons i:hover {
+  color: #c00;
+}
+
+/* COLUNA 4 */
+.coluna4 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.colMenu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.proconve-col img{
+  width: 45px;
+  height: auto;
+}
+
+.proconve img {
+  width: 38px;
+  height: auto;
+}
+
+/* bloco da frase */
+.proconve {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+}
+
+.message {
+  max-width: 250px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+
+/*=============col5 forms=============*/
+
+.coluna5 {
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  width: 20%;
+  height: 20%;
+}
+
+.col5 {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.forms-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.col5-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.col5-form input {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: #000;
+  border: 2px solid #fff;
+}
+
+.col5-form button {
+  background-color: #000;
+  color: #fff;
+  padding: 12px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.col5-form button:hover {
+  background-color: #a00;
+}
+
+.forms-privacy {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.newsletter-privacy a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+.bottom-property {
+  background-color: #333333;
+  text-align: center;
+  font-size: 8px;
+  color: #fff;
+}
+
+.social__screen {
+  z-index: 1000;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  background-color: #c00;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 1; /* sempre visível */
+  pointer-events: auto; /* sempre clicável */
+  animation: shakeXY .6s infinite ease-in-out;
+  transition: all 0.3s ease;
+}
+
+/* ====== Animação de balanço nos dois eixos ====== */
+@keyframes shakeXY {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(-4px, 5px); }
+  50%  { transform: translate(8px, -4px); }
+  75%  { transform: translate(-2px, 1px); }
+  100% { transform: translate(0, 0); }
+} 
