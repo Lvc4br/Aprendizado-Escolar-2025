@@ -4,10 +4,12 @@
 
 ## 📚 Purpose
 
-This repository records academic work and exercises from my studies. It is kept public as part of my learning history, but it is **not intended to represent my professional portfolio**.
+This repository records academic work and exercises from my studies. It is kept public as part of my learning history and coding practice.
 
-## 🧭 Portfolio
+## 🧭 Role in My GitHub
 
-For professional projects and technical work, see my [Web Portfolio](https://lvc4br.github.io/Web-Portfolio/) and GitHub profile.
+This is an **academic/learning repository**, not a professional portfolio project.
+
+My professional coding projects and more complete technical work are presented separately as they mature.
 
 **Luca Toniolo — Lvc4br**
