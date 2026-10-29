@@ -1,15 +1,23 @@
-# Aprendizado Escolar
+# Aprendizado Escolar — 2025
 
-> Repository for school exercises, notes and study material.
+Repositório de apoio para registrar atividades escolares, exercícios e materiais de estudo produzidos durante 2025.
 
-## 📚 Purpose
+## Objetivo
 
-This repository records academic work and exercises from my studies. It is kept public as part of my learning history and coding practice.
+- Organizar trabalhos e exercícios acadêmicos.
+- Manter um histórico de aprendizagem.
+- Reunir materiais de referência relacionados às atividades escolares.
 
-## 🧭 Role in My GitHub
+## Como navegar
 
-This is an **academic/learning repository**, not a professional portfolio project.
+Consulte as pastas e os arquivos disponíveis no repositório. As instruções de execução, quando necessárias, dependem da atividade e devem ser verificadas junto aos respectivos arquivos.
 
-My professional coding projects and more complete technical work are presented separately as they mature.
+Este repositório é um arquivo de estudos, não uma aplicação de software nem o portfólio profissional principal.
 
-**Luca Toniolo — Lvc4br**
+## Projetos relacionados
+
+- [ETEC — Desenvolvimento de Sistemas](https://github.com/Lvc4br/ETEC-Desenvolvimento-de-Sistemas): exercícios de programação do curso técnico.
+- [Projetos-PW-ETEC](https://github.com/Lvc4br/Projetos-PW-ETEC): atividades de Programação Web.
+- [LV_Portfolio](https://github.com/Lvc4br/LV_Portfolio): portfólio principal.
+
+**Autor:** Luca Toniolo — [@Lvc4br](https://github.com/Lvc4br)
