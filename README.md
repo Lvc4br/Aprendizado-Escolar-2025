@@ -1,23 +1,19 @@
 # Aprendizado Escolar — 2025
 
-Repositório de apoio para registrar atividades escolares, exercícios e materiais de estudo produzidos durante 2025.
+Projeto acadêmico simples executado no navegador.
 
-## Objetivo
+## Arquivos
 
-- Organizar trabalhos e exercícios acadêmicos.
-- Manter um histórico de aprendizagem.
-- Reunir materiais de referência relacionados às atividades escolares.
+- `index.html`: estrutura da página.
+- `style.css`: estilos.
+- `app.js`: interações no navegador.
 
-## Como navegar
+## Execução
 
-Consulte as pastas e os arquivos disponíveis no repositório. As instruções de execução, quando necessárias, dependem da atividade e devem ser verificadas junto aos respectivos arquivos.
+Abra `index.html` em um navegador. Não há processo npm ou build documentado.
 
-Este repositório é um arquivo de estudos, não uma aplicação de software nem o portfólio profissional principal.
+## Estado
 
-## Projetos relacionados
+Repositório de estudo. Não há testes automatizados ou lint configurados. Verifique `app.js` antes de presumir que os dados são persistidos entre sessões.
 
-- [ETEC — Desenvolvimento de Sistemas](https://github.com/Lvc4br/ETEC-Desenvolvimento-de-Sistemas): exercícios de programação do curso técnico.
-- [Projetos-PW-ETEC](https://github.com/Lvc4br/Projetos-PW-ETEC): atividades de Programação Web.
-- [LV_Portfolio](https://github.com/Lvc4br/LV_Portfolio): portfólio principal.
-
-**Autor:** Luca Toniolo — [@Lvc4br](https://github.com/Lvc4br)
+**Autor:** Luca Toniolo — https://github.com/Lvc4br
