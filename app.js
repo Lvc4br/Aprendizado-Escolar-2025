@@ -43,14 +43,13 @@ let currentIndex = 0;
 
 function changeImage() {
     // Calcular a posição para a transição
+    currentIndex = (currentIndex + 1) % totalItems;
     const offset = -100 * currentIndex; // Desloca a lista de itens para a esquerda
 
     // Aplica a transição de deslizamento na lista de itens
     if (!sliderList || totalItems === 0) return;
     sliderList.style.transform = `translateX(${offset}%)`; 
 
-    // Atualiza o índice para a próxima imagem
-    currentIndex = (currentIndex + 1) % totalItems; // Garante que quando atingir o final, volta ao início
 }
 
 // Muda a imagem automaticamente a cada 5 segundos
